@@ -1,5 +1,6 @@
-# Created by https://www.gitignore.io/api/java,windows,androidstudio
-# Edit at https://www.gitignore.io/?templates=java,windows,androidstudio
+
+# Created by https://www.gitignore.io/api/androidstudio
+# Edit at https://www.gitignore.io/?templates=androidstudio
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -131,46 +132,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-### Java ###
-# Compiled class file
-
-# Log file
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-
-# Package Files #
-*.jar
-*.nar
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-
-### Windows ###
-# Windows thumbnail cache files
-ehthumbs_vista.db
-
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# End of https://www.gitignore.io/api/java,windows,androidstudio
+# End of https://www.gitignore.io/api/androidstudio
