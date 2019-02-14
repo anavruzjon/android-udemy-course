@@ -7,6 +7,43 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/messageLinearLayout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="60dp"
+        android:background="#fffaff0b"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/boardImage"
+        app:layout_constraintEnd_toEndOf="@+id/boardImage"
+        app:layout_constraintStart_toStartOf="@+id/secondRow"
+        app:layout_constraintTop_toTopOf="@+id/firstRow">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sample text"
+            android:id="@+id/summaryText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="28sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="play again"
+            android:onClick="playAgain"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/boardImage"

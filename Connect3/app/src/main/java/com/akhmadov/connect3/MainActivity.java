@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "The " + winnerPlayer + " player win the game",
                             Toast.LENGTH_LONG).show();
+                    setAllAlphasToMin();
+                    TextView summaryText = (TextView) findViewById(R.id.summaryText);
+                    summaryText.setText("The " + winnerPlayer + " player win the game");
+
+                    LinearLayout layout = (LinearLayout) findViewById(R.id.messageLinearLayout);
+                    layout.setVisibility(View.VISIBLE);
+
                     isGameActive = false;
                 }
             }
@@ -74,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
 
             if (isGameOver) {
                 Toast.makeText(MainActivity.this, "Game over. Noone win the game", Toast.LENGTH_LONG).show();
+
+                setAllAlphasToMin();
+                TextView summaryText = (TextView) findViewById(R.id.summaryText);
+                summaryText.setText("Game over. Noone win the game");
+
+                LinearLayout layout = (LinearLayout) findViewById(R.id.messageLinearLayout);
+                layout.setVisibility(View.VISIBLE);
+
                 isGameActive = false;
             }
         }
@@ -113,5 +130,82 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return pos;
+    }
+
+    public void playAgain(View view) {
+        setImageResourceNull(R.id.firstRowFistColumn);
+        setImageResourceNull(R.id.firstRowSecondColumn);
+        setImageResourceNull(R.id.firstRowThirdColumn);
+        setImageResourceNull(R.id.secondRowFistColumn);
+        setImageResourceNull(R.id.secondRowSecondColumn);
+        setImageResourceNull(R.id.secondRowThirdColumn);
+        setImageResourceNull(R.id.thirdRowFistColumn);
+        setImageResourceNull(R.id.thirdRowSecondColumn);
+        setImageResourceNull(R.id.thirdRowThirdColumn);
+        activePlayer = 0;
+        isGameActive = true;
+
+        LinearLayout layout = (LinearLayout) findViewById(R.id.messageLinearLayout);
+        layout.setVisibility(View.INVISIBLE);
+
+        for (int i = 0; i < 9; i++)
+            states[i] = -1;
+
+        setAllAlphasToMax();
+    }
+
+    public void setImageResourceNull(int id){
+        ImageView image = (ImageView) findViewById(id);
+        image.setImageResource(0);
+    }
+
+    public void setAllAlphasToMin(){
+        ImageView image;
+        image = (ImageView) findViewById(R.id.boardImage);
+        image.setAlpha(0.2f);
+
+        image = (ImageView) findViewById(R.id.firstRowFistColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.firstRowSecondColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.firstRowThirdColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.secondRowFistColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.secondRowSecondColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.secondRowThirdColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.thirdRowFistColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.thirdRowSecondColumn);
+        image.setAlpha(0.2f);
+        image = (ImageView) findViewById(R.id.thirdRowThirdColumn);
+        image.setAlpha(0.2f);
+    }
+
+    public void setAllAlphasToMax(){
+        ImageView image;
+        image = (ImageView) findViewById(R.id.boardImage);
+        image.setAlpha(1.0f);
+
+        image = (ImageView) findViewById(R.id.firstRowFistColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.firstRowSecondColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.firstRowThirdColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.secondRowFistColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.secondRowSecondColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.secondRowThirdColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.thirdRowFistColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.thirdRowSecondColumn);
+        image.setAlpha(1.0f);
+        image = (ImageView) findViewById(R.id.thirdRowThirdColumn);
+        image.setAlpha(1.0f);
     }
 }
