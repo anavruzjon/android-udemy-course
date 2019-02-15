@@ -22,7 +22,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:onClick="onItemClicked"
-            android:text="Do you speak english" />
+            android:text="Do you &#10; speak english?" />
 
         <Button
             android:id="@+id/goodEveningBtn"
@@ -71,7 +71,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:onClick="onItemClicked"
-            android:text="I live in" />
+            android:text="I live in..." />
 
         <Button
             android:id="@+id/myNameIsBtn"
@@ -83,7 +83,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:onClick="onItemClicked"
-            android:text="My name is" />
+            android:text="My name is..." />
 
         <Button
             android:id="@+id/pleaseBtn"
@@ -108,7 +108,7 @@
             android:layout_gravity="fill"
             android:onClick="onItemClicked"
             android:text="Welcome" />
-        
+
     </GridLayout>
 
 </android.support.constraint.ConstraintLayout>
