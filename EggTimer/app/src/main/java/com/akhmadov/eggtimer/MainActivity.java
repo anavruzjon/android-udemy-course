@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     SeekBar seekTimer;
     Boolean counterIsActive = false;
+    Button startStopButton;
     TextView minutesText;
     TextView secondsText;
     CountDownTimer countDownTimer;
@@ -26,11 +27,10 @@ public class MainActivity extends AppCompatActivity {
         seekTimer = (SeekBar) findViewById(R.id.seekTime);
         minutesText = (TextView) findViewById(R.id.minutesTimer);
         secondsText = (TextView) findViewById(R.id.secondsTimer);
+        startStopButton = (Button) findViewById(R.id.startTopButton);
 
         seekTimer.setMax(10 * 60);
         seekTimer.setProgress(30);
-
-
     }
 
     @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startStopTimer(View view) {
-        final Button startStopBtn = ((Button) view);
+
         seekTimer.setEnabled(false);
         int minutes = Integer.parseInt(minutesText.getText().toString());
         final int seconds = Integer.parseInt(secondsText.getText().toString());
@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (counterIsActive) {
             resetCounter();
-            startStopBtn.setText("START");
             if (countDownTimer != null)
                 countDownTimer.cancel();
 
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                     resetCounter();
 
                     Log.d("myLogs", "Finished");
-                    startStopBtn.setText("START");
                     MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.airhorn);
                     mediaPlayer.start();
 
@@ -99,12 +97,14 @@ public class MainActivity extends AppCompatActivity {
             }.start();
 
 
-            startStopBtn.setText("STOP");
+            startStopButton.setText("STOP");
             counterIsActive = true;
         }
     }
 
     public void resetCounter(){
+
+        startStopButton.setText("START");
         secondsText.setText("30");
         minutesText.setText("0");
         seekTimer.setEnabled(true);
