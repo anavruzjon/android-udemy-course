@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="timerBackground">#FFE033</color>
+    <color name="answerBackground">#FF7109</color>
+    <color name="firsCell">#304FFE</color>
+    <color name="secondCell">#64DD17</color>
+    <color name="thirdCell">#C51162</color>
+    <color name="fourthCell">#00B8D4</color>
+    <color name="black">#202020</color>
+</resources>
