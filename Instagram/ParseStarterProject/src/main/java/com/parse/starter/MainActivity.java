@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         */
-
+/*
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Score");
 
         query.whereGreaterThan("score", 20);
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+*/
 
         /*ParseUser user = new ParseUser();
         user.setUsername("akhmadov");
