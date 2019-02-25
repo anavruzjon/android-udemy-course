@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+        } else {
+            if (ParseUser.getCurrentUser().get("riderOrDriver") != null) {
+                String userType = "rider";
+                if (!isRider) {
+                    userType = "driver";
+                    Log.d("myLogs", "Redirecting as driver");
+                } else {
+                    Log.d("myLogs", "Redirecting as rider");
+                }
+            }
         }
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
@@ -50,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
     public void getStarted(View view) {
         isRider = !riderDriverSwitch.isChecked();
 
-
+        String userType = "rider";
+        if (!isRider) {
+            userType = "driver";
+            Log.d("myLogs", "Redirecting as driver");
+        } else {
+            Log.d("myLogs", "Redirecting as rider");
+        }
+        ParseUser.getCurrentUser().put("riderOrDriver", userType);
     }
 }
