@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Twitter Clone</string>
+    <string name="main_activity_main_text">See what\'s happening in the world right now.</string>
+    <string name="signup_text">Create account</string>
+    <string name="login_text">Log in</string>
+    <string name="has_account_question">Already have an account?</string>
+    <string name="create_account_main_text">Create your account</string>
+    <string name="create_account_username_hint">Input username</string>
+    <string name="create_account_password_hint">Input password</string>
+    <string name="create_account_email_hint">Input email</string>
+    <string name="create_account_signup_text">Sign up</string>
+    <string name="login_main_text">Log in to Twitter</string>
+    <string name="login_login_button">Log in</string>
+    <string name="incorrect_email">Incorrect email address</string>
+    <string name="incorrect_username_password">Incorrect username or password</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="login_login">Username</string>
+    <string name="login_password">Password</string>
+    <string name="create_account_email">Email</string>
+</resources>
